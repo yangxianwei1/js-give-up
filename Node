@@ -1,0 +1,37 @@
+//数据类型
+5种基本数据类型:undefined、null、string、num、Boolean
+一种复杂数据类型——object,其本质上是由一对无序的无名值队组成的(这个我也有点不懂,望后期有所理解)
+ECMAscript不支持创建自定义类型机制,并且所有的值的类型都是以上六种数据类型之一
+//检测数据类型
+其方法用typeof操作符,其返回值如下
+1.undefined——其值未定义或未声明
+var a ;alert(typeof a);
+2.Boolean——其值的类型为布尔值
+var a=true;alert( typeof a);
+3.String——其值为字符串类型
+var a="hello js";alert(typeof a)
+4.number——其值为数字类型
+var a=5;alert(typeof a)
+5.object——其值为一个对象或为null
+var a=null;alert(typeof a);
+var a=new Object();alert(typeof a);
+6.function——其值为函数
+function a(){};alert(typeof a);
+另外 typeof是一个操作符而不是函数,因此有无括号都可以
+alert(typeof(字符串、数字皆可))
+//五种数据类型的介绍
+一：undefined类型
+用var 进行声明,但还未进行初始化的值返回undefined;
+没进行声明的变量只能执行一项操作,即用typeof检测其数据类型
+二：null 类型
+null类型是只第二个只有一个值的数据类型,该值为null,从逻辑上看,该值指向一个空对象指针,这也就是为何typeof 检测其值为null时会返回object
+实际上,undefind的值是派生自null的,所以undefined==null会返回true
+ 三:Boolean类型和Boolean()转型函数
+ 对于任何一个数据类型的值调用Boolean()函数都会返回一个Boolean值，该规则其实还是比较重要的,在if()语句将会自动执行Boolean()函数转换
+ 四:number数据类型
+ 最基本的数据字面量类型是十进制;
+ 八进制的第一位字面量必须是以0开头，然后后八进制数字序列(0~7);八进制字面量在严格模式下是无效的;
+ 十六进制字面值的前两位必须是以0x,后跟任何十六进制数(0~9与A~f)可大写可小写;
+ 在进行算术计算时所有的八进制和十六进制都会转换成十进制；
+ 浮点数值,
+ 
