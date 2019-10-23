@@ -31,3 +31,39 @@ Person yxw=new Person();//new Person()是在堆中动态分配一块区域 被�
 访问控制符：
 （通常在java的对象中 我们一般将其静态的属性设置为私有的 然后在设置一个公有的方法 通过共有的方法来改变私有的变量 只对外部提供方法而不提供类的私有属性 这样
 就会变得更加安全）
+类的构造函数：（有参数、无参数）
+该函数没有返回类型 不像我们普通的函数有int 、void ..，在一个类中 （利用该类生成一个对象时）如果有无参构造函数无论是否调用 都会自动执行
+/*
+class a
+{
+private int i;
+public a(){
+system.out.printf("无参函数被调用");
+}
+}
+class testA
+{
+public static void main(String[]args)
+{
+a a2=new a();//只要执行这一步 就会显示该函数被调用
+}
+}
+/***************************/
+
+class a
+{
+private int i;
+public a(int j){
+i=j;
+system.out.printf("无参函数被调用");
+}
+}
+class testA
+{
+public static void main(String[]args)
+{
+a a2=new a(2);//当我们构造出a2对象时 会将2赋值给a类中的i值  也就是说在定义该对象的同时完成对该事物的初始化
+
+}
+}
+*/
